@@ -1,0 +1,9 @@
+# DSH bundle patch: inserts the one-click desktop launcher row.
+# Optional config (uncomment under `config:`):
+#   port:    3080            # port the shortcut starts DSH on (defaults to the
+#                            # port the browser used when creating it)
+#   profile: web             # profile the shortcut boots
+#   appName: DSH Web         # display name of the generated shortcut
+- insert:
+    - id: one-click-launcher
+      name: dsh-one-click-launcher

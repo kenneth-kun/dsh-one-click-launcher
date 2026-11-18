@@ -1,0 +1,78 @@
+{
+  "name": "dsh-one-click-launcher",
+  "version": "0.1.0",
+  "description": "One-click desktop launcher for DeepSeek Harness (DSH): creates a macOS .app, a Windows .lnk or a Linux .desktop entry that starts `dsh web`, reuses a running instance and opens the authenticated URL. · 一键启动 DeepSeek Harness 的桌面快捷方式插件，三平台通用。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib",
+    "assets",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "PUBLISHING.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "icons": "python3 scripts/make-icons.py",
+    "prepublishOnly": "node --test test/*.test.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek",
+    "deepseek-harness",
+    "harness",
+    "plugin",
+    "launcher",
+    "shortcut",
+    "desktop",
+    "one-click",
+    "macos",
+    "windows",
+    "linux"
+  ],
+  "license": "MIT",
+  "author": "kenneth-kun",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenneth-kun/dsh-one-click-launcher.git"
+  },
+  "homepage": "https://github.com/kenneth-kun/dsh-one-click-launcher",
+  "bugs": {
+    "url": "https://github.com/kenneth-kun/dsh-one-click-launcher/issues"
+  }
+}
