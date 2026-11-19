@@ -9,8 +9,9 @@
 | --- | --- |
 | 代码仓库 | 待建：`https://github.com/kenneth-kun/dsh-one-click-launcher`（public） |
 | GitHub topic `dsh-plugin` | 待加（仓库页 → About 齿轮 → Topics） |
-| 提交收录 Issue | 待发，模板见 [docs/SUBMIT-ISSUE.md](docs/SUBMIT-ISSUE.md) |
+| 提交收录 Issue | 已提交：[#830](https://github.com/dshplugin/dsh-plugin-hub/issues/830) |
 | npm 包 `dsh-one-click-launcher` | **未发布**（没有 npm 账号；网站仍会收录，但应用内「插件中心」里搜不到） |
+| 市场收录页 | ✅ [dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher](https://dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher) |
 
 ## 一、发布仓库（这次要做的）
 

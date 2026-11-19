@@ -9,6 +9,7 @@
 [![GitHub](https://img.shields.io/badge/github-kenneth--kun%2Fdsh--one--click--launcher-181717?logo=github)](https://github.com/kenneth-kun/dsh-one-click-launcher)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![topic: dsh-plugin](https://img.shields.io/badge/topic-dsh--plugin-0e7490)](https://github.com/topics/dsh-plugin)
+[![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher)
 
 </div>
 
