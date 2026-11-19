@@ -6,6 +6,7 @@
 
 **给 DeepSeek Harness 做一个双击就跑的桌面图标 · macOS / Windows / Linux 三平台通用**
 
+[![npm](https://img.shields.io/npm/v/dsh-one-click-launcher.svg)](https://www.npmjs.com/package/dsh-one-click-launcher)
 [![GitHub](https://img.shields.io/badge/github-kenneth--kun%2Fdsh--one--click--launcher-181717?logo=github)](https://github.com/kenneth-kun/dsh-one-click-launcher)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![topic: dsh-plugin](https://img.shields.io/badge/topic-dsh--plugin-0e7490)](https://github.com/topics/dsh-plugin)
@@ -52,20 +53,19 @@
 
 ## 安装
 
-### 从 GitHub 源码安装（当前可用）
-
-```sh
-dsh plugin --profile web add github:kenneth-kun/dsh-one-click-launcher
-```
-
-### 从 npm 安装（发布到 npm 之后）
+### 从 npm 安装（推荐，已发布 0.1.0）
 
 ```sh
 dsh plugin --profile web add dsh-one-click-launcher
 ```
 
-> 目前还没有发布 npm 包：dsh-plugin.org 会照常收录本仓库，但应用内「插件中心」里搜不到。
-> 需要一键安装的话，按 [PUBLISHING.md](PUBLISHING.md) 执行一次 `npm publish` 即可。
+也可以在 **设置 → 插件市场**（[dsh-plugin.org](https://dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher)）里搜 `dsh-one-click-launcher` 一键安装。
+
+### 从 GitHub 源码安装
+
+```sh
+dsh plugin --profile web add github:kenneth-kun/dsh-one-click-launcher
+```
 
 ### 本地开发
 

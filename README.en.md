@@ -6,6 +6,7 @@
 
 **A double-clickable desktop icon for DeepSeek Harness — macOS, Windows and Linux**
 
+[![npm](https://img.shields.io/npm/v/dsh-one-click-launcher.svg)](https://www.npmjs.com/package/dsh-one-click-launcher)
 [![GitHub](https://img.shields.io/badge/github-kenneth--kun%2Fdsh--one--click--launcher-181717?logo=github)](https://github.com/kenneth-kun/dsh-one-click-launcher)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![topic: dsh-plugin](https://img.shields.io/badge/topic-dsh--plugin-0e7490)](https://github.com/topics/dsh-plugin)
@@ -52,20 +53,19 @@ Details that matter:
 
 ## Install
 
-From source (available today):
-
-```sh
-dsh plugin --profile web add github:kenneth-kun/dsh-one-click-launcher
-```
-
-From npm (once published):
+From npm (recommended, 0.1.0 is live):
 
 ```sh
 dsh plugin --profile web add dsh-one-click-launcher
 ```
 
-> The npm package is not published yet: dsh-plugin.org still lists the repository as-is, but it will
-> not appear in the in-app Plugin Center until `npm publish` has run (see [PUBLISHING.md](PUBLISHING.md)).
+Or install it from **Settings → Plugin marketplace** ([dsh-plugin.org](https://dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher)).
+
+From GitHub source:
+
+```sh
+dsh plugin --profile web add github:kenneth-kun/dsh-one-click-launcher
+```
 
 Linking a local checkout:
 

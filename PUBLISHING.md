@@ -10,7 +10,7 @@
 | 代码仓库 | 待建：`https://github.com/kenneth-kun/dsh-one-click-launcher`（public） |
 | GitHub topic `dsh-plugin` | 待加（仓库页 → About 齿轮 → Topics） |
 | 提交收录 Issue | 已提交：[#830](https://github.com/dshplugin/dsh-plugin-hub/issues/830) |
-| npm 包 `dsh-one-click-launcher` | **未发布**（没有 npm 账号；网站仍会收录，但应用内「插件中心」里搜不到） |
+| npm 包 `dsh-one-click-launcher` | ✅ 已发布 0.1.0：<https://www.npmjs.com/package/dsh-one-click-launcher> |
 | 市场收录页 | ✅ [dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher](https://dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher) |
 
 ## 一、发布仓库（这次要做的）
@@ -40,7 +40,22 @@ git push -u origin main
 [![Listed on dsh-plugin.org](https://dsh-plugin.org/badges/listed.svg)](https://dsh-plugin.org/plugins/kenneth-kun/dsh-one-click-launcher)
 ```
 
-## 二、之后可选：发布到 npm
+## 二、发布到 npm（已完成 0.1.0）
+
+> 已发布：<https://www.npmjs.com/package/dsh-one-click-launcher>（`npm install dsh-one-click-launcher` 可拉到 19 个文件）。
+
+### 踩过的坑（下次发版会再遇到）
+
+1. **发布必须过 2FA**：账号未开 2FA 时，任何 token 都会被 `403 ... bypass 2fa enabled is required` 拒掉；
+   开了 2FA（`auth-and-writes`）后要使用 **Granular token 勾选 “Allow this token to bypass two-factor authentication”**
+   （`npm token list --json` 里 `bypass_2fa: true` 才对）。
+2. **npm staged publishing 会先生成占位版本**：新发布的版本先进入 stage 队列，registry 上暂时只有一个
+   `0.0.0-stage` 的 “Temporary Holding Version”，处理完成后真正的版本才出现（本次约 2 分钟后自动完成）。
+   如果需要手动批准：npm CLI ≥ **11.15.0** 才有 `npm stage`（`npm stage list` / `npm stage approve <id>`），
+   或在 npmjs.com 的包页面上确认。
+3. **本机 `node` 是 v14**（`/usr/local/bin/node`），而 npm 11 需要 Node ≥ 20，所以直接 `npm publish` 会崩
+   （`Cannot find module 'node:path'`）。用 `PATH="$(ls -d ~/.workbuddy/binaries/node/versions/*/bin | sort -V | tail -1):$PATH" npm publish` 绕过。
+
 
 发布 npm 是"进入 DSH 应用内插件中心"的唯一方式（插件中心只展示能 `dsh plugin --profile web add <包名>` 一键装的插件）。
 
