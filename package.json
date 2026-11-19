@@ -28,7 +28,7 @@
   "scripts": {
     "test": "node --test test/*.test.js",
     "icons": "python3 scripts/make-icons.py",
-    "prepublishOnly": "node --test test/*.test.js"
+    "prepublishOnly": "node scripts/verify.mjs"
   },
   "dsh": {
     "bundle": {
